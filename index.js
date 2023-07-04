@@ -9,16 +9,16 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       console.table(contactList);
       break;
     case "take":
-      const tContact = await contacts.getContactById(id);
-      console.log(tContact);
+      const takeContact = await contacts.getContactById(id);
+      console.log(takeContact);
       break;
     case "remove":
-      const rContact = await contacts.removeContact(id);
-      console.log(rContact);
+      const removeContact = await contacts.removeContact(id);
+      console.log(removeContact);
       break;
     case "add":
-      const nContact = await contacts.addContact(name, email, phone);
-      console.log(nContact);
+      const addContact = await contacts.addContact(name, email, phone);
+      console.log(addContact);
       break;
     default:
       console.log("this action does not exist");
